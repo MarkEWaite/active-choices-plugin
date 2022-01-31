@@ -4,46 +4,19 @@
          xmlns:transitionWrapper="transitionWrapper">
     <d:taglib uri="transitionWrapper">
       <d:tag name="randomTableIdBlock">
-          <j:choose>
-              <j:when test="${divBasedFormLayout}">
-                  <div id="tbl_ecp_${h.escape(it.randomName)}">
-                      <d:invokeBody/>
-                  </div>
-              </j:when>
-              <j:otherwise>
-                  <table id="tbl_ecp_${h.escape(it.randomName)}">
-                      <d:invokeBody/>
-                  </table>
-              </j:otherwise>
-          </j:choose>
+        <div id="tbl_ecp_${h.escape(it.randomName)}">
+          <d:invokeBody/>
+        </div>
       </d:tag>
       <d:tag name="row">
-          <j:choose>
-              <j:when test="${divBasedFormLayout}">
-                  <div id="ecp_${h.escape(it.randomName)}_${index}" class="tr" style="white-space:nowrap">
-                      <d:invokeBody/>
-                  </div>
-              </j:when>
-              <j:otherwise>
-                  <tr id="ecp_${h.escape(it.randomName)}_${index}" style="white-space:nowrap">
-                      <d:invokeBody/>
-                  </tr>
-              </j:otherwise>
-          </j:choose>
+        <div id="ecp_${h.escape(it.randomName)}_${index}" class="tr" style="white-space:nowrap">
+          <d:invokeBody/>
+        </div>
       </d:tag>
       <d:tag name="td">
-          <j:choose>
-              <j:when test="${divBasedFormLayout}">
-                  <div>
-                      <d:invokeBody/>
-                  </div>
-              </j:when>
-              <j:otherwise>
-                  <td>
-                      <d:invokeBody/>
-                  </td>
-              </j:otherwise>
-          </j:choose>
+        <div>
+          <d:invokeBody/>
+        </div>
       </d:tag>
   </d:taglib>
   <div id="ecp_${h.escape(it.randomName)}" style="float:left; overflow-y:auto; padding-right:25px" class="dynamic_checkbox">
